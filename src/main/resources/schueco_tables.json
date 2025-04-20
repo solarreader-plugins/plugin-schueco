@@ -1,0 +1,148 @@
+[
+  {
+    "columns": [
+      {
+        "columnName": "Strom",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Leistung",
+        "columnType": "NUMBER"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "netzstrom"
+          },
+          {
+            "expression": "netzspannung"
+          },
+          {
+            "expression": "wattleistung"
+          }
+        ]
+      }
+    ],
+    "tableName": "AC"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Strom",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Spannung",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Leistung",
+        "columnType": "NUMBER"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "solarstrom"
+          },
+          {
+            "expression": "solarspannung"
+          },
+          {
+            "expression": "solarleistung"
+          }
+        ]
+      }
+    ],
+    "tableName": "PV"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Device_Status",
+        "columnType": "NUMBER"
+      },
+      {
+        "columnName": "Temperatur",
+        "columnType": "NUMBER"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "status"
+          },
+          {
+            "expression": "geraetetemperatur"
+          }
+        ]
+      }
+    ],
+    "tableName": "Service"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Produkt",
+        "columnType": "STRING"
+      },
+      {
+        "columnName": "Datum",
+        "columnType": "STRING"
+      },
+      {
+        "columnName": "Objekt",
+        "columnType": "STRING"
+      },
+      {
+        "columnName": "Firmware",
+        "columnType": "STRING"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "PlUGIN_NAME"
+          },
+          {
+            "expression": "DT_DATE_FORMAT(CURRENT, \"dd.MM.yyyy HH:mm\")"
+          },
+          {
+            "expression": "PROVIDER_NAME"
+          },
+          {
+            "expression": "\"-\""
+          }
+        ]
+      }
+    ],
+    "tableName": "Info"
+  },
+  {
+    "columns": [
+      {
+        "columnName": "Wh_Heute",
+        "columnType": "NUMBER"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "expression": "tagesenergie"
+          }
+        ]
+      }
+    ],
+    "tableName": "Summen"
+  }
+]

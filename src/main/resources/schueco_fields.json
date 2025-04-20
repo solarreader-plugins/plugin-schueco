@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Schueco Firmware",
+    "command": "9",
+    "cacheDurationInSeconds": 7200,
+    "maxErrorThreshold": 3,
+    "errorSuspensionTimeSeconds": 60,
+    "propertyFieldList": [
+      {
+        "fieldName": "model",
+        "fieldType": "STRING",
+        "expression": "value",
+        "index": "0",
+        "unit": ""
+      }
+    ],
+    "providerPropertyType": "COMMAND"
+  },
+  {
+    "name": "Schueco Data",
+    "command": "0",
+    "maxErrorThreshold": 3,
+    "errorSuspensionTimeSeconds": 60,
+    "propertyFieldList": [
+      {
+        "fieldName": "status",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "0",
+        "unit": ""
+      },
+      {
+        "fieldName": "solarspannung",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "1",
+        "unit": "A"
+      },
+      {
+        "fieldName": "solarstrom",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "2",
+        "unit": "V"
+      },
+      {
+        "fieldName": "solarleistung",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "3",
+        "unit": "W"
+      },
+      {
+        "fieldName": "netzspannung",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "4",
+        "unit": "A"
+      },
+      {
+        "fieldName": "netzstrom",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "5",
+        "unit": "V"
+      },
+      {
+        "fieldName": "wattleistung",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "6",
+        "unit": "W"
+      },
+      {
+        "fieldName": "geraetetemperatur",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "7",
+        "unit": "C"
+      },
+      {
+        "fieldName": "tagesenergie",
+        "fieldType": "NUMBER",
+        "expression": "value",
+        "index": "8",
+        "unit": "W"
+      }
+    ],
+    "providerPropertyType": "COMMAND"
+  }
+]
