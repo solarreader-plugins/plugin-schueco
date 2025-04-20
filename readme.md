@@ -5,7 +5,9 @@
 
 # Schueco Plugin for Solarreader
 
-This plugin for Solarreader reads Schüco solar inverter.
+This plugin for Solarreader reads data from a Schüco solar inverter.
+
+It requires an RS485-to-USB adapter equipped with an FTDI chipset.
 
 ### Requirements
 
