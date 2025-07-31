@@ -27,13 +27,11 @@ import de.schnippsche.solarreader.backend.connection.usb.UsbConnection;
 import de.schnippsche.solarreader.backend.connection.usb.UsbConnectionFactory;
 import de.schnippsche.solarreader.backend.frame.KacoFrame;
 import de.schnippsche.solarreader.backend.protocol.KacoProtocol;
-import de.schnippsche.solarreader.backend.protocol.KnownProtocol;
 import de.schnippsche.solarreader.backend.protocol.Protocol;
 import de.schnippsche.solarreader.backend.provider.AbstractUsbProvider;
 import de.schnippsche.solarreader.backend.provider.CommandProviderProperty;
 import de.schnippsche.solarreader.backend.provider.ProviderInterface;
 import de.schnippsche.solarreader.backend.provider.ProviderProperty;
-import de.schnippsche.solarreader.backend.provider.SupportedInterface;
 import de.schnippsche.solarreader.backend.table.Table;
 import de.schnippsche.solarreader.backend.util.SerialPortConfigurationBuilder;
 import de.schnippsche.solarreader.backend.util.Setting;
@@ -43,7 +41,6 @@ import de.schnippsche.solarreader.frontend.ui.HtmlInputType;
 import de.schnippsche.solarreader.frontend.ui.HtmlWidth;
 import de.schnippsche.solarreader.frontend.ui.UIInputElementBuilder;
 import de.schnippsche.solarreader.frontend.ui.UIList;
-import de.schnippsche.solarreader.plugin.PluginMetadata;
 import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.*;
@@ -53,19 +50,7 @@ import org.tinylog.Logger;
 /**
  * The Schueco class is a plugin that provides support for Schueco devices. It implements the {@link
  * ProviderInterface} and manages communication with the device through USB connections.
- *
- * <p>This plugin is configured with metadata using the {@link PluginMetadata} annotation, which
- * provides information such as the plugin's name, version, author, and supported interfaces.
  */
-@PluginMetadata(
-    name = "Schueco",
-    version = "1.0.1",
-    author = "Stefan Töngi",
-    url = "https://github.com/solarreader-plugins/plugin-Schueco",
-    svgImage = "schueco.svg",
-    supportedInterfaces = {SupportedInterface.NAMED_USB, SupportedInterface.LISTED_USB},
-    usedProtocol = KnownProtocol.KACO,
-    supports = "Schueco SGI")
 public class Schueco extends AbstractUsbProvider {
   private final Protocol<KacoFrame> protocol;
   private final StringArrayCalculator calculator;
@@ -118,7 +103,7 @@ public class Schueco extends AbstractUsbProvider {
    * Provides the dialog UI elements for configuring the provider, based on the locale.
    *
    * @return An optional UIList containing the dialog elements, or an empty optional if not
-   *     applicable.
+   * applicable.
    */
   @Override
   public Optional<UIList> getProviderDialog() {
@@ -143,7 +128,7 @@ public class Schueco extends AbstractUsbProvider {
    * Retrieves the supported properties for this provider from the "schueco.json" resource file.
    *
    * @return An optional list of supported properties, or an empty optional if the properties cannot
-   *     be loaded.
+   * be loaded.
    */
   @Override
   public Optional<List<ProviderProperty>> getSupportedProperties() {

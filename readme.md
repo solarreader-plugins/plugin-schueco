@@ -18,4 +18,4 @@ This plugin requires the main project **Solarreader**, which can be found here:
 
 | Device Model | Type   | Connection                     |
 |--------------|--------|--------------------------------|
-| Schüco       | SG1200 | RS485 -> USB with FTDI Adapter |
+| Schüco       | SG1200 | RS485 -> USB with FTDI Chipset |
